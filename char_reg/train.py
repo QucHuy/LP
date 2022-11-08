@@ -16,15 +16,14 @@ device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 parser = argparse.ArgumentParser()
 parser.add_argument("--path_train", type =str, default=None, help = "path train to data")
 parser.add_argument("--path_val", type =str, default=None, help = "path val to data")
-parser.add_argument("--img_size", nargs='+', type=int, default=(32, 32), help='[train, test] image sizes')
 parser.add_argument("--batch_size",  type=int, default=16, help='total batch size for all GPUs')
 parser.add_argument('--epochs', type=int, default=100)
 opt = parser.parse_args()
 
 
 
-dataset_train = CharData(opt.path_train, "train",transform= DataTransform(opt.img_size[0], 45, 2))
-dataset_val = CharData(opt.path_val, "val", transform= DataTransform(opt.img_size[0],45,2))
+dataset_train = CharData(opt.path_train, "train",transform= DataTransform(32, 45, 2))
+dataset_val = CharData(opt.path_val, "val", transform= DataTransform(32,45,2))
 
 
 dataloader_train = DataLoader(dataset= dataset_train,batch_size = opt.batch_size,  shuffle=True)
