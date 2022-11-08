@@ -64,10 +64,7 @@ for e in range(opt.epochs):
             print(f'Epoch [{e + 1}/{opt.epochs}], Step [{i + 1}/{len(dataloader_train)}], Loss: {loss.item():.4f}')
     print(f"TOTAL TRAIN LOSS: {train_loss}")
     print("-"*30)
-model = Lenet()
-model.load_state_dict(torch.load("D:\Model\yolov7\char_reg\lenet.pth", map_location = device))
-model.to(device)
-model = model.eval()
+
 with torch.no_grad():
     n_correct = 0
     n_samples = 0
