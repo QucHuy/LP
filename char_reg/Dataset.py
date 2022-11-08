@@ -118,30 +118,5 @@ def normalize_label(labels):
         list_labels.append(label)
     return list_labels
 
-# lab_name = []
-# c = []
-# with open("C:\\Users\\ACER\\Documents\\Zalo Received Files\\chardata\\val\\labels\\anno.txt") as f:
-#     f0 = f.readlines()
-#     for i in range(len(f0)):
-#         f0[i] = f0[i].replace("\n","").replace("\t", "")
-#         lab_name.append(f0[i][:len(f0[i])-1])
-#         c.append(f0[i][len(f0[i])-1:])
-
-# img_ls =CharData("C:\\Users\\ACER\\Documents\\Zalo Received Files\\chardata\\train", "train", Transform.DataTransform(32,45,2))
-# print(img_ls[0])
-# img_path ="C:\\Users\\ACER\\Documents\\Zalo Received Files\\chardata\\val\\images"
-# img_name = os.listdir(img_path)
-# r = []
-# # print
-# for i in img_name:
-#     count = 0
-#     for x in lab_name:
-#         if x == i:
-#             count+=1
-#     if count==0:
-#         r.append(i)
-# print(r)
-# for i in c:
-#     print(i)
 
 
