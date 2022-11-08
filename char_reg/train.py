@@ -10,9 +10,7 @@ import argparse
 import torch.nn as nn
 
 
-# def train_val_split(lendata, data, ratio):
-#     n_val = math.ceil(lendata * ratio)
-#     return random.sample(data, n_val)
+
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 parser = argparse.ArgumentParser()
